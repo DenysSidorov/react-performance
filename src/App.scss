@@ -1,0 +1,47 @@
+body {
+  background-color: red !important;
+}
+
+.wrapper {
+  padding: 30px;
+  display: flex;
+  //justify-content: center;
+  align-items: center;
+  border: 1px solid grey;
+  width: 100vw;
+  height: 100vh;
+  .clock{
+    border: aquamarine;
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span{
+      font-size: 30px;
+      color: green;
+    }
+  }
+  .todo{
+    border: #ff5835;
+    width: 40%;
+    min-height: 300px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .inputNew{
+      border: #50ffeb;
+      width: 100%;
+      height: 30px;
+      padding: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
