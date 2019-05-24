@@ -1,7 +1,3 @@
-body {
-  background-color: red !important;
-}
-
 .wrapper {
   padding: 30px;
   display: flex;
@@ -11,7 +7,7 @@ body {
   width: 100vw;
   height: 100vh;
   .clock{
-    border: aquamarine;
+    border: solid 1px aquamarine;
     width: 40%;
     margin-left: 5%;
     margin-right: 5%;
@@ -25,7 +21,7 @@ body {
     }
   }
   .todo{
-    border: #ff5835;
+    border: solid 1px  #ff5835;
     width: 40%;
     min-height: 300px;
     margin-left: 5%;
@@ -34,9 +30,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     .inputNew{
       margin-bottom: 30px;
-      border: #3e4bff;
+      border: solid 1px  #3e4bff;
       width: 100%;
       height: 30px;
       padding: 8px;
@@ -48,7 +45,7 @@ body {
         justify-content: center;
         align-items: center;
         padding: 5px;
-        border: #60223b;
+        border: solid 1px  #60223b;
         span{
 
         }
@@ -60,14 +57,14 @@ body {
       }
       button{
         margin-left: 20px;
-        width: 18px;
-        height: 18px;
+        width: 28px;
+        height: 28px;
         border: 1px solid #3c38b1
       }
     }
     .todoItem{
       margin-bottom: 30px;
-      border: #7a743e;
+      border: solid 1px  #7a743e;
       width: 100%;
       height: 30px;
       padding: 8px;
@@ -82,6 +79,7 @@ body {
         font-size: 14px;
       }
       .todoItem_remove{
+        cursor: pointer;
         font-size: 18px;
       }
     }
