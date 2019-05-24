@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import TodoInput from './todo-count';
+import TodoCount from './todo-count';
 
 class InputNew extends Component {
   state = {
@@ -13,10 +13,11 @@ class InputNew extends Component {
   render() {
     return (
       <div className="inputNew">
-        <TodoInput/>
+        <TodoCount/>
         <input type="text"
                value={this.state.text}
                onChange={this.handleUserType}/>
+        <button>Ok</button>
       </div>
     );
   }

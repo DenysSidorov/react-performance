@@ -35,13 +35,55 @@ body {
     justify-content: center;
     align-items: center;
     .inputNew{
-      border: #50ffeb;
+      margin-bottom: 30px;
+      border: #3e4bff;
       width: 100%;
       height: 30px;
       padding: 8px;
       display: flex;
       justify-content: center;
       align-items: center;
+      .todoCount{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        border: #60223b;
+        span{
+
+        }
+      }
+      input{
+        margin-left: 20px;
+        padding: 5px;
+          border: 1px solid black
+      }
+      button{
+        margin-left: 20px;
+        width: 18px;
+        height: 18px;
+        border: 1px solid #3c38b1
+      }
+    }
+    .todoItem{
+      margin-bottom: 30px;
+      border: #7a743e;
+      width: 100%;
+      height: 30px;
+      padding: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .todoItem_count{
+        margin-right: 10px;
+      }
+      .todoItem_text{
+        margin-right: 10px;
+        font-size: 14px;
+      }
+      .todoItem_remove{
+        font-size: 18px;
+      }
     }
   }
 }

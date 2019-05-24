@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import InputNew from './todo-input/input-new';
-import TodoCount from './todo-input/todo-count';
+import TodoItem from './todo-item';
 
 class Todo extends Component {
   render() {
     return (
       <div className="todo">
         <InputNew/>
-        <TodoCount/>
+
+        <TodoItem/>
+        <TodoItem/>
+        <TodoItem/>
       </div>
     );
   }
