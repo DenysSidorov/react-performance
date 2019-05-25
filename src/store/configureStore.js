@@ -1,5 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from './reducers/index';
 
 
@@ -10,14 +11,18 @@ const enhancers = [];
 const middleware = [thunk];
 
 // setup in webpack or launch-server
-if (process.env.NODE_ENV === 'development') {
+const isDevMode = process.env.NODE_ENV === 'development';
+if (isDevMode) {
  setDevTools();
 }
 
 // join all middlewares
-const composedEnhancers = compose(applyMiddleware(...middleware), ...enhancers);
+let composedEnhancers = compose(applyMiddleware(...middleware), ...enhancers);
+composedEnhancers = isDevMode ? composeWithDevTools(composedEnhancers) : composedEnhancers;
+
 
 // main store of pur app
+
 export const  store = createStore(rootReducer, initialState, composedEnhancers);
 
 // setInterval(()=>{
@@ -27,11 +32,11 @@ export const  store = createStore(rootReducer, initialState, composedEnhancers);
 // use it only in development
 function setDevTools() {
  // https://github.com/zalmoxisus/redux-devtools-extension#1-for-chrome
- const devToolsExtension = window.devToolsExtension;
-
- if (typeof devToolsExtension === 'function') {
-  enhancers.push(devToolsExtension());
- }
+ // const devToolsExtension = window.devToolsExtension;
+ //
+ // if (typeof devToolsExtension === 'function') {
+ //  enhancers.push(devToolsExtension());
+ // }
 
  // https://github.com/leoasis/redux-immutable-state-invariant
  // only for develop, show message in console, when mutation state without spread, assign...
